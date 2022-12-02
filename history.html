@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c6f5d3ac9f.js" crossorigin="anonymous"></script>
     <title>Colusseum</title>
@@ -84,6 +85,26 @@ The Colosseum saw some 4 centuries of active use until the battles of the Wester
     <div  style="padding: 35px; text-align: center; padding-top: 0px; ">
     </div>
 
-    <script src="script.js"></script>
+    <button id="toTopBtn" onclick="toTopFunc()"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <script >
+        let toTopBtn = document.getElementById("toTopBtn");
+
+        window.onscroll = function() {scrollFunction()}
+
+        function scrollFunction () {
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 20 ){
+                toTopBtn.style.display = "block";
+
+            }
+            else{
+                toTopBtn.style.display = "none";
+            }
+        }
+
+        function toTopFunc () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
