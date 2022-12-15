@@ -25,7 +25,6 @@
                 <li><a href="model.html" >3D Model</a></li>
             </ul>
         </div>
-        <i class="fa fa-bars" aria-hidden="true"></i>
     </section>
 
     <div class="content" style="padding: 35px;">
@@ -115,7 +114,7 @@ Spectators were given tickets in the form of numbered pottery shards, which dire
     </div>
     
 
-    <button id="toTopBtn" onclick="toTopFunc()"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <button id="toTopBtn" onclick="toTopFunc()" ><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     <script >
         let toTopBtn = document.getElementById("toTopBtn");
 
@@ -132,7 +131,12 @@ Spectators were given tickets in the form of numbered pottery shards, which dire
         }
 
         function toTopFunc () {
-            document.body.scrollTop = 0;
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+                });
+                            
             document.documentElement.scrollTop = 0;
         }
     </script>
